@@ -140,7 +140,7 @@ class User_Model extends Model
 		$where = array("childId"=>$childId);
 		 $dataCallTableObj = $this->_db->connection->appformobile->data_call;
 		 
-		 $records = $dataCallTableObj->find($where,array('_id'=>0));
+		 $records = $dataCallTableObj->find($where,array('_id'=>0))->sort(array("TimeStamp"=>-1));
 		 $dataCall = array();
 		 foreach($records as $record)
 		 {
@@ -153,7 +153,7 @@ class User_Model extends Model
 	{
 		$where = array("childId"=>$childId);
 		$dataSMSTableObj = $this->_db->connection->appformobile->data_sms;
-		$records = $dataSMSTableObj->find($where,array('_id'=>0));
+		$records = $dataSMSTableObj->find($where,array('_id'=>0))->sort(array("TimeStamp"=>-1));;
 		$dataSMS = array();
 		foreach($records as $record)
 		{
@@ -165,7 +165,7 @@ class User_Model extends Model
 	{
 		$where = array("childId"=>$childId);
 		$dataWebsiteTableObj = $this->_db->connection->appformobile->data_website;
-		$records = $dataWebsiteTableObj->find($where,array('_id'=>0,'childId'=>0));
+		$records = $dataWebsiteTableObj->find($where,array('_id'=>0,'childId'=>0))->sort(array("LastActive"=>-1));
 		$dataWebsite = array();
 		foreach($records as $record)
 		{
