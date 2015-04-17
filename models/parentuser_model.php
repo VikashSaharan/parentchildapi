@@ -20,8 +20,8 @@ class Parentuser_Model extends Model
 			}
 			
 			$today = time();
-		//	$no_of_month = "+".NO_OF_MONTH_FREE." months";
-			$no_of_month = "+".NO_OF_MONTH_FREE." days";
+			$no_of_month = "+".NO_OF_MONTH_FREE." months";
+		//	$no_of_month = "+".NO_OF_MONTH_FREE." days";
 			$twoMonthsLater =strtotime($no_of_month, $today);
 			$endDate = new MongoDate($twoMonthsLater);
 			$insert["no_of_child"] = NO_OF_CHILD_USER;
