@@ -28,6 +28,7 @@ class User_Model extends Model
 			 if(!$record)
 			 {
 				$post['childId']=$childId;
+				$post['parentId']=$parentId;
 				if($dataCallTableObj->insert($post))
 				{
 					$response = true;
@@ -52,6 +53,7 @@ class User_Model extends Model
 		 if(!$record)
 		 {
 			$post['childId']=$childId;
+			$post['parentId']=$parentId;
 			if($dataSMSTableObj->insert($post))
 			{
 				$response = true;
@@ -76,6 +78,7 @@ class User_Model extends Model
 		 if(!$record)
 		 {
 			$post['childId']=$childId;
+			$post['parentId']=$parentId;
 			if($dataWebsiteTableObj->insert($post))
 			{
 				$response = true;
